@@ -1,0 +1,579 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+@font-face {
+    font-family: "SF Text";
+    font-weight: 100;
+    font-style: italic;
+    src: url("https://sf.abarba.me/SF-UI-Text-UltrathinItalic.otf");
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    background: linear-gradient(240deg, #9d4b4d, #2232a9);
+    margin: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.iphone {
+    position: relative;
+    width: 300px;
+    height: 590px;
+    display: inline-block;
+    margin-right: 100px;
+    text-align: left;
+    transition: 1.2s ease;
+}
+
+.iphone img.iphone {
+    width: 100%;
+    height: 100%;
+}
+
+.iphone img {
+    max-width: 100%;
+}
+
+.iphone .content {
+
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    width: calc(300px - 39px);
+    height: calc(590px - 24px);
+    border-radius: 34px;
+    z-index: -1;
+    overflow-x: auto;
+    transition: 1.2s ease;
+}
+
+.iphone .content .top-notch {
+    height: 5%;
+    width: 92%;
+    padding-top: 8px;
+    margin: 0 auto;
+    bottom: 7.5%;
+}
+
+.iphone .content .top-notch .icons-left,
+.iphone .content .top-notch .icons-right {
+    font-size: 70%;
+    margin-top: 5px;
+    color: #FFFFFF;
+}
+
+.iphone .content .top-notch .icons-left {
+    padding-left: 8px;
+    float: left;
+}
+
+.iphone .content .top-notch .icons-left span {
+    font-size: 100%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.iphone .content .top-notch .icons-right {
+    float: right;
+    margin-right: 0px;
+}
+
+.iphone .content .top-notch .fa-battery-full {
+    margin-left: 3px;
+}
+
+.iphone .content .top-notch .fa-wifi {
+    margin-left: 3px;
+}
+
+.iphone .content .lock-icon {
+    top: 8%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.iphone .content .lock-icon img {
+    width: 20px;
+    height: 25%;
+}
+
+.iphone .content .clock-text-overlay {
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.iphone .content .clock-text-overlay h1 {
+    font-size: 230%;
+    font-weight: 400;
+    color: #FFFFFF;
+    transform: scale(0.9, 1.1);
+}
+
+.iphone .content .touch-overlay {
+    bottom: 8%;
+}
+
+.iphone .content .touch-overlay img {
+    width: 40px;
+    height: 40px;
+}
+
+.iphone .content .date-text-overlay {
+    top: 19%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.iphone .content .date-text-overlay h5 {
+    color: #FFFFFF;
+    font-weight: 500;
+    transform: scale(1, 1.1);
+}
+
+.iphone .content .line {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    width: 130px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    transform: translateX(-50%);
+}
+
+.signal-icon {
+    color: #FFF;
+    margin-left: 1px;
+}
+
+.signal-icon img {
+    width: 13px;
+    height: 10px;
+    color: #FFF;
+}
+
+.zoomIn {
+    animation-duration: .5s;
+}
+
+.message-overlay {
+    position: absolute;
+    top: 28%;
+    margin: 8px;
+    visibility: hidden;
+}
+
+.message-overlay img {
+    opacity: 0.9;
+    width: 94%;
+    padding-left: 6%;
+}
+
+.message-overlay img:hover {
+    cursor: pointer;
+}
+
+.message-overlay img:active {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform .25s ease;
+}
+
+.touch-overlay {
+    position: absolute;
+    bottom: 8%;
+    width: 90%;
+}
+
+.left-touch {
+    float: left;
+    padding-left: 12%;
+}
+
+.left-touch img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.right-touch {
+    float: right;
+}
+
+.right-touch img {
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.merrywrap {
+    position: absolute;
+    left: 50px;
+    bottom: 40px;
+    top: 40px;
+    visibility: hidden;
+}
+
+.giftbox {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.giftbox>div {
+    background: #de2b2b;
+    position: absolute;
+}
+
+.giftbox>div:after,
+.giftbox>div:before {
+    position: absolute;
+    content: "";
+    top: 0;
+}
+
+.giftbox:after {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    content: "Tặng em món quà nhỏ xíu nè!";
+
+    left: 0;
+    bottom: 0;
+    font-size: 24px;
+    text-align: center;
+    transform: rotate(-22deg);
+    transform-origin: 0 0;
+}
+
+.giftbox .cover {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 25%;
+    z-index: 2;
+}
+
+.giftbox .cover:before {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    width: 50px;
+    transform: translateX(-50%);
+    background: gold;
+}
+
+.giftbox .cover>div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+}
+
+.giftbox .cover>div:before,
+.giftbox .cover>div:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: inset 0 0 0 15px gold;
+    border-radius: 30px;
+    transform-origin: 50% 100%;
+}
+
+.giftbox .cover>div:before {
+    transform: translateX(-45%) skewY(40deg);
+}
+
+.giftbox .cover>div:after {
+    transform: translateX(45%) skewY(-40deg);
+}
+
+.giftbox .box {
+    right: 5%;
+    left: 5%;
+    height: 80%;
+    bottom: 0;
+}
+
+.giftbox .box:before {
+    width: 50px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: gold;
+}
+
+.giftbox .box:after {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.icons {
+    position: absolute;
+    left: -18%;
+    top: 75%;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.icons .row {
+    width: 100%;
+    text-align: center;
+}
+.icons .row span {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0 #41f5ec;
+    font-size: 26px;
+    display: inline-block;
+    opacity: 0;
+    transition: transform 1s ease-in, opacity 0.7s;
+}
+.good-night{
+    width: 100%;
+    text-align: center;
+}
+.good-night span{
+    line-height:50px;
+    color: #FFf;
+    font-size: 16px;
+    opacity: 0;
+    transition: transform 1s ease-in, opacity 0.7s;
+}
+.step-1 .giftbox {
+    animation: wobble 0.5s linear infinite forwards;
+}
+
+.step-1 .cover {
+    animation: wobble 0.5s linear infinite 0.1s forwards;
+}
+
+.step-1 .icons .row span {
+    opacity: 1;
+}
+
+.step-2 .giftbox:after {
+    opacity: 0;
+}
+
+.step-3 .giftbox,
+.step-4 .giftbox {
+    opacity: 0;
+    z-index: 1;
+}
+
+.step-3 .giftbox:after,
+.step-4 .giftbox:after {
+    opacity: 0;
+}
+
+.step-2 .giftbox .cover {
+    animation: flyUp 0.4s ease-in forwards;
+}
+
+.step-2 .giftbox .box {
+    animation: flyDown 0.2s ease-in 0.05s forwards;
+}
+
+@keyframes wobble {
+    25% {
+        transform: rotate(4deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes flyUp {
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flyDown {
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.step-1 .icons .row span {
+    opacity: 0;
+}
+
+.step-1 .icons .row span:first-child {
+    transform: translateY(1000%) translateX(600%);
+}
+
+.step-1 .icons .row span:nth-child(2) {
+    transform: translateY(700%) translateX(500%);
+}
+
+.step-1 .icons .row span:nth-child(3) {
+    transform: translateY(700%) translateX(400%);
+}
+
+.step-1 .icons .row span:nth-child(4) {
+    transform: translateY(700%) translateX(300%);
+}
+
+.step-1 .icons .row span:nth-child(5) {
+    transform: translateY(700%) translateX(200%);
+}
+
+.step-1 .icons .row span:nth-child(6) {
+    transform: translateY(700%) translateX(100%);
+}
+
+.step-1 .icons .row span:nth-child(7) {
+    transform: translateY(700%) translateX(0);
+}
+
+.step-1 .icons .row span:nth-child(8) {
+    transform: translateY(700%) translateX(-100%);
+}
+
+.step-1 .icons .row span:nth-child(9) {
+    transform: translateY(700%) translateX(-200%);
+}
+
+.step-1 .icons .row span:nth-child(10) {
+    transform: translateY(700%) translateX(-300%);
+}
+
+.step-1 .icons .row span:nth-child(11) {
+    transform: translateY(700%) translateX(-400%);
+}
+
+.step-1 .icons .row span:nth-child(12) {
+    transform: translateY(700%) translateX(-500%);
+}
+
+.step-1 .icons .row span:nth-child(13) {
+    transform: translateY(700%) translateX(-600%);
+}
+
+.step-2 .icons .row span:nth-child(2) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.step-2 .icons .row span:nth-child(3) {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.step-2 .icons .row span:nth-child(4) {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.step-2 .icons .row span:nth-child(5) {
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+}
+
+.step-2 .icons .row span:nth-child(6) {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.step-2 .icons .row span:nth-child(7) {
+    -webkit-transition-delay: 0.35s;
+    transition-delay: 0.35s;
+}
+
+.step-2 .icons .row span:nth-child(8) {
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.step-2 .icons .row span:nth-child(9) {
+    -webkit-transition-delay: 0.45s;
+    transition-delay: 0.45s;
+}
+
+.step-2 .icons .row span:nth-child(10) {
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.step-2 .icons .row span:nth-child(11) {
+    -webkit-transition-delay: 0.55s;
+    transition-delay: 0.55s;
+}
+
+.step-2 .icons .row span:nth-child(12) {
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.step-2 .icons .row span:nth-child(13) {
+    -webkit-transition-delay: 0.65s;
+    transition-delay: 0.65s;
+}
+
+.step-2 .icons span,
+.step-3 .icons span,
+.step-4 .icons span {
+    opacity: 0.7;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 0.91);
+}
+
+.step-4 .icons .row span,
+.step-3 .icons .row span {
+    animation: wobble 0.6s linear infinite forwards;
+}
+
+.step-4 .icons .row span:nth-child(even),
+.step-3 .icons .row span:nth-child(even) {
+    animation-duration: 0.7s;
+}
+
+.title {
+    text-align: center;
+    font-family: "Mountains of Christmas";
+}
+
+#footer a:link {
+    color: black;
+}
+
+#footer a:visited {
+    color: black;
+}
+
+#footer a:hover {
+    color: #BC1818;
+}
